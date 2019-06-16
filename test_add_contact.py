@@ -13,18 +13,14 @@ class TestAddContact(unittest.TestCase):
 
     def test_add_contact_hanna(self):
         wd = self.wd
-        self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
         self.create_contact(wd, Contact(firstname="Hanna", lastname="Semerenko", nickname="magika", company="test", email="anna.semerenko@djangostars.com", bday="13", bmonth="April", byear="1979"))
-        self.go_to_home_page(wd)
         self.logout(wd)
 
     def test_add_contact_masha(self):
         wd = self.wd
-        self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
         self.create_contact(wd, Contact(firstname="Mary", lastname="Ilyina", nickname="masha", company="test", email="mary.ilyina@djangostars.com", bday="14", bmonth="July", byear="1998"))
-        self.go_to_home_page(wd)
         self.logout(wd)
 
     def logout(self, wd):
@@ -63,8 +59,10 @@ class TestAddContact(unittest.TestCase):
         wd.find_element_by_name("byear").send_keys(contact.byear)
         # Submit contact creation
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+        self.go_to_home_page(wd)
 
     def login(self, wd, username, password):
+        self.open_home_page(wd)
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys(username)
