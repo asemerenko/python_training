@@ -9,7 +9,12 @@ class ContactHelper:
         wd = self.app.wd
         # Go to add contact form
         wd.find_element_by_link_text("add new").click()
-        # Fill contact form
+        self.fill_contact_form(contact)
+        # Submit contact creation
+        wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+        self.go_to_home_page()
+
+    def fill_contact_form(self, contact):
         self.change_contact_field_value("firstname", contact.firstname)
         self.change_contact_field_value("lastname", contact.lastname)
         self.change_contact_field_value("nickname", contact.nickname)
@@ -18,24 +23,13 @@ class ContactHelper:
         self.select_contact_value("bday", contact.bday)
         self.select_contact_value("bmonth", contact.bmonth)
         self.change_contact_field_value("byear", contact.byear)
-        # Submit contact creation
-        wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
-        self.go_to_home_page()
 
     def modify_first_contact(self, contact):
         wd = self.app.wd
         self.go_to_home_page()
         # Open modification form
         wd.find_element_by_xpath("//img[@alt='Edit']").click()
-        # Fill contact form
-        self.change_contact_field_value("firstname", contact.firstname)
-        self.change_contact_field_value("lastname", contact.lastname)
-        self.change_contact_field_value("nickname", contact.nickname)
-        self.change_contact_field_value("company", contact.company)
-        self.change_contact_field_value("email", contact.email)
-        self.select_contact_value("bday", contact.bday)
-        self.select_contact_value("bmonth", contact.bmonth)
-        self.change_contact_field_value("byear", contact.byear)
+        self.fill_contact_form(contact)
         # Submit contact modification
         wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
         self.go_to_home_page()
