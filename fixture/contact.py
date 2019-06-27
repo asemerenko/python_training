@@ -28,10 +28,13 @@ class ContactHelper:
         self.change_contact_field_value("byear", contact.byear)
 
     def modify_first_contact(self, contact):
+        modify_contact_by_index(0, contact)
+
+    def modify_contact_by_index(self, index, contact):
         wd = self.app.wd
         self.go_to_home_page()
         # Open modification form
-        wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
         self.fill_contact_form(contact)
         # Submit contact modification
         wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
@@ -39,9 +42,12 @@ class ContactHelper:
         self.contact_cache = None
 
     def delete_first_contact(self):
+        delate_contact_by_index(0)
+
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         self.go_to_home_page()
-        wd.find_element_by_name("selected[]").click()
+        wd.find_elements_by_name("selected[]")[index].click()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to.alert.accept()
         wd.find_element_by_css_selector("div.msgbox")
