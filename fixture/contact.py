@@ -22,6 +22,10 @@ class ContactHelper:
         self.change_contact_field_value("lastname", contact.lastname)
         self.change_contact_field_value("nickname", contact.nickname)
         self.change_contact_field_value("company", contact.company)
+        self.change_contact_field_value("home", contact.homephone)
+        self.change_contact_field_value("mobile", contact.mobilephone)
+        self.change_contact_field_value("work", contact.workphone)
+        self.change_contact_field_value("fax", contact.fax)
         self.change_contact_field_value("email", contact.email)
         self.select_contact_value("bday", contact.bday)
         self.select_contact_value("bmonth", contact.bmonth)
@@ -80,7 +84,7 @@ class ContactHelper:
 
     contact_cache = None
 
-    def add_contact_list(self):
+    def get_contact_list(self):
         if self.contact_cache is None:
             wd = self.app.wd
             self.go_to_home_page()

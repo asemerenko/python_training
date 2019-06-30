@@ -8,6 +8,10 @@ class Contact:
                  lastname=None,
                  nickname=None,
                  company=None,
+                 homephone=None,
+                 mobilephone=None,
+                 workphone=None,
+                 fax=None,
                  email=None,
                  bday=None,
                  bmonth=None,
@@ -18,6 +22,10 @@ class Contact:
         self.lastname = lastname
         self.nickname = nickname
         self.company = company
+        self.homephone = homephone
+        self.mobilephone = mobilephone
+        self.workphone = workphone
+        self.fax = fax
         self.email = email
         self.bday = bday
         self.bmonth = bmonth
