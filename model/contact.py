@@ -11,6 +11,7 @@ class Contact:
                  homephone=None,
                  mobilephone=None,
                  workphone=None,
+                 secondaryphone=None,
                  fax=None,
                  email=None,
                  bday=None,
@@ -25,6 +26,7 @@ class Contact:
         self.homephone = homephone
         self.mobilephone = mobilephone
         self.workphone = workphone
+        self.secondaryphone = secondaryphone
         self.fax = fax
         self.email = email
         self.bday = bday

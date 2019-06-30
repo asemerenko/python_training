@@ -13,6 +13,7 @@ def test_add_contact_hanna(app):
         mobilephone="0974472212",
         workphone="5555555",
         fax="0969986635",
+        secondaryphone="3244225",
         email="anna.semerenko@djangostars.com",
         bday="13",
         bmonth="April",
