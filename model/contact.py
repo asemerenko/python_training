@@ -6,32 +6,52 @@ class Contact:
     def __init__(self,
                  firstname=None,
                  lastname=None,
+                 middlename=None,
                  nickname=None,
                  company=None,
+                 title=None,
+                 address=None,
+                 all_emails_from_home_page=None,
+                 all_phones_from_home_page=None,
                  homephone=None,
                  mobilephone=None,
                  workphone=None,
-                 secondaryphone=None,
                  fax=None,
                  email=None,
+                 email2=None,
+                 email3=None,
+                 homepage=None,
                  bday=None,
                  bmonth=None,
                  byear=None,
+                 secondaryaddress=None,
+                 secondaryphone=None,
+                 notes=None,
                  id=None
                  ):
         self.firstname = firstname
         self.lastname = lastname
+        self.middlename = middlename
         self.nickname = nickname
         self.company = company
+        self.title = title
+        self.address = address
+        self.all_emails_from_home_page = all_emails_from_home_page
+        self.all_phones_from_home_page = all_phones_from_home_page
         self.homephone = homephone
         self.mobilephone = mobilephone
         self.workphone = workphone
-        self.secondaryphone = secondaryphone
         self.fax = fax
         self.email = email
+        self.email2 = email2
+        self.email3 = email3
+        self.homepage = homepage
         self.bday = bday
         self.bmonth = bmonth
         self.byear = byear
+        self.secondaryaddress = secondaryaddress
+        self.secondaryphone = secondaryphone
+        self.notes = notes
         self.id = id
 
     def __eq__(self, other):
