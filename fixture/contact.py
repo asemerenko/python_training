@@ -34,7 +34,7 @@ class ContactHelper:
         self.change_contact_field_value("byear", contact.byear)
 
     def modify_first_contact(self, contact):
-        modify_contact_by_index(0, contact)
+        self.modify_contact_by_index(0, contact)
 
     def modify_contact_by_index(self, index, contact):
         wd = self.app.wd
@@ -83,7 +83,7 @@ class ContactHelper:
         return Contact(homephone=homephone, mobilephone=mobilephone, workphone=workphone, secondaryphone=secondaryphone)
 
     def delete_first_contact(self):
-        delate_contact_by_index(0)
+        self.delete_contact_by_index(0)
 
     def delete_contact_by_index(self, index):
         wd = self.app.wd
