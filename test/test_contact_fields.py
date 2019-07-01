@@ -2,6 +2,7 @@ from model.contact import Contact
 from random import randrange
 import re
 
+
 def test_comparison_contact_on_home_and_edit_page(app):
     if app.contact.count() == 0:
         contact = Contact(
@@ -37,11 +38,14 @@ def test_comparison_contact_on_home_and_edit_page(app):
 def clear(s):
     return re.sub("[() -]", "", s)
 
+
 def merge_phones(contact):
     return "\n".join(filter(lambda x: x != "",
-                            map(lambda x:clear(x),
+                            map(lambda x: clear(x),
                                 filter(lambda x: x is not None,
-                                       [contact.homephone, contact.mobilephone, contact.workphone, contact.secondaryphone]))))
+                                       [contact.homephone, contact.mobilephone,
+                                        contact.workphone, contact.secondaryphone]))))
+
 
 def merge_emails(contact):
     return "\n".join(filter(lambda x: x != "",

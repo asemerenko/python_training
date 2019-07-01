@@ -2,6 +2,7 @@
 from model.group import Group
 from random import randrange
 
+
 def test_modify_group_name(app):
     if app.group.count() == 0:
         app.group.create(Group(name="New_group_for_modify"))
@@ -15,8 +16,7 @@ def test_modify_group_name(app):
     old_groups[index] = group
     assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)
 
-
-#def test_modify_group_header(app):
+# ef test_modify_group_header(app):
 #    if app.group.count() == 0:
 #        app.group.create(Group(header="New_group_for_modify"))
 #    old_groups = app.group.add_group_list()
