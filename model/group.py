@@ -13,7 +13,7 @@ class Group:
         return self.name == other.name and (self.id is None or other.id is None or self.id == other.id)
 
     def __repr__(self):
-        return "Group(%s, %s)" % (self.name, self.id)
+        return "Group(%s, %s, %s, %s)" % (self.name, self.id, self.header, self.footer)
 
     def id_or_max(self):
         if self.id:
