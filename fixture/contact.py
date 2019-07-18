@@ -127,6 +127,16 @@ class ContactHelper:
         wd.find_element_by_css_selector("div.msgbox")
         self.contact_cache = None
 
+    def add_contact_in_group(self, id_group, id_contact):
+        wd = self.app.wd
+        self.go_to_home_page()
+        wd.find_element_by_css_selector("input[value='%s']" % id_contact).click()
+        wd.implicitly_wait(3)
+        wd.find_element_by_name("to_group").click()
+        Select(wd.find_element_by_name("to_group")).select_by_value(id_group)
+        wd.find_element_by_name("add").click()
+
+
     def select_contact_value(self, select_param, select_value):
         wd = self.app.wd
         if select_value is not None:
