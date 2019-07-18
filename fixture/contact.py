@@ -48,6 +48,22 @@ class ContactHelper:
         self.go_to_home_page()
         self.contact_cache = None
 
+    def modify_contact_by_id(self, id, contact):
+        wd = self.app.wd
+        self.open_contact_to_edit_by_id(id)
+        self.fill_contact_form(contact)
+        # Submit contact modification
+        wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
+        self.go_to_home_page()
+        self.contact_cache = None
+
+    def open_contact_to_edit_by_id(self, id):
+        wd = self.app.wd
+        self.go_to_home_page()
+        row = wd.find_element_by_xpath("//tr[@name='entry']/td/input[@value='%s']/../.." % id)
+        cell = row.find_elements_by_tag_name("td")[7]
+        cell.find_element_by_tag_name("a").click()
+
     def open_contact_to_edit_by_index(self, index):
         wd = self.app.wd
         self.go_to_home_page()

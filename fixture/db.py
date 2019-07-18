@@ -24,6 +24,17 @@ class DbFixture:
             cursor.close()
         return list
 
+    def get_group_by_id(self, id_in):
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("SELECT group_id, group_name, group_header, group_footer FROM group_list WHERE group_id='%s'"
+                           % id_in)
+            (id, name, header, footer) = cursor.fetchone()
+            group_return = Group(id=str(id), name=name, header=header, footer=footer)
+        finally:
+            cursor.close()
+        return group_return
+
     def get_contact_list(self):
         list = []
         cursor = self.connection.cursor()
@@ -37,6 +48,18 @@ class DbFixture:
         finally:
             cursor.close()
         return list
+
+    def get_contact_by_id(self, id_in):
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("SELECT id, firstname, lastname, middlename, nickname, company, "
+                           "title FROM addressbook WHERE deprecated='0000-00-00 00:00:00' and id='%s'" % id_in)
+            (id, firstname, lastname, middlename, nickname, company, title) = cursor.fetchone()
+            contact_return = Contact(id=str(id), firstname=firstname, lastname=lastname, middlename=middlename,
+                                     nickname=nickname, company=company, title=title)
+        finally:
+            cursor.close()
+        return contact_return
 
     def destroy(self):
         self.connection.close()
