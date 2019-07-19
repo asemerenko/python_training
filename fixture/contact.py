@@ -121,21 +121,36 @@ class ContactHelper:
     def delete_contact_by_id(self, id):
         wd = self.app.wd
         self.go_to_home_page()
-        wd.find_element_by_css_selector("input[value='%s']" % id).click()
+        self.select_contact(id)
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to.alert.accept()
         wd.find_element_by_css_selector("div.msgbox")
         self.contact_cache = None
 
+    def select_contact(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
+
     def add_contact_in_group(self, id_group, id_contact):
         wd = self.app.wd
         self.go_to_home_page()
-        wd.find_element_by_css_selector("input[value='%s']" % id_contact).click()
+        self.select_contact(id_contact)
         wd.implicitly_wait(3)
         wd.find_element_by_name("to_group").click()
         Select(wd.find_element_by_name("to_group")).select_by_value(id_group)
         wd.find_element_by_name("add").click()
 
+    def dell_contact_from_group(self, id_group, id_contact):
+        wd = self.app.wd
+        self.go_to_contacts_in_group_page(id_group)
+        self.select_contact(id_contact)
+        wd.find_element_by_name("remove").click()
+
+    def go_to_contacts_in_group_page(self, id):
+        wd = self.app.wd
+        if not (wd.current_url == "http://localhost/addressbook/?group=%s" % id
+                and len(wd.find_element_by_name("remove")) > 0):
+            wd.get("http://localhost/addressbook/?group=%s" % id)
 
     def select_contact_value(self, select_param, select_value):
         wd = self.app.wd

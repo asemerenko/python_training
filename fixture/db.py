@@ -61,5 +61,17 @@ class DbFixture:
             cursor.close()
         return contact_return
 
+    def get_group_list_with_contacts(self):
+        list = []
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("SELECT DISTINCT group_id FROM address_in_groups")
+            for row in cursor:
+                (id,) = row
+                list.append(str(id))
+        finally:
+            cursor.close()
+        return list
+
     def destroy(self):
         self.connection.close()
