@@ -40,11 +40,11 @@ class DbFixture:
         cursor = self.connection.cursor()
         try:
             cursor.execute("SELECT id, firstname, lastname, middlename, nickname, company, "
-                           "title FROM addressbook WHERE deprecated='0000-00-00 00:00:00'")
+                           "title, address FROM addressbook WHERE deprecated='0000-00-00 00:00:00'")
             for row in cursor:
-                (id, firstname, lastname, middlename, nickname, company, title) = row
+                (id, firstname, lastname, middlename, nickname, company, title, address) = row
                 list.append(Contact(id=str(id), firstname=firstname, lastname=lastname, middlename=middlename,
-                                    nickname=nickname, company=company, title=title))
+                                    nickname=nickname, company=company, title=title, address=address))
         finally:
             cursor.close()
         return list
@@ -53,10 +53,14 @@ class DbFixture:
         cursor = self.connection.cursor()
         try:
             cursor.execute("SELECT id, firstname, lastname, middlename, nickname, company, "
-                           "title FROM addressbook WHERE deprecated='0000-00-00 00:00:00' and id='%s'" % id_in)
-            (id, firstname, lastname, middlename, nickname, company, title) = cursor.fetchone()
+                           "title, address, email, email2, email3, home, mobile, work, phone2 "
+                           "FROM addressbook WHERE deprecated='0000-00-00 00:00:00' and id='%s'" % id_in)
+            (id, firstname, lastname, middlename, nickname, company, title,
+             address, email, email2, email3, home, mobile, work, phone2) = cursor.fetchone()
             contact_return = Contact(id=str(id), firstname=firstname, lastname=lastname, middlename=middlename,
-                                     nickname=nickname, company=company, title=title)
+                                     nickname=nickname, company=company, title=title, address=address, email=email,
+                                     email2=email2, email3=email3, homephone=home, mobilephone=mobile, workphone=work,
+                                     secondaryphone=phone2)
         finally:
             cursor.close()
         return contact_return
