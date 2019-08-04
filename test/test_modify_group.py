@@ -7,11 +7,10 @@ def test_modify_group_name(app, db, check_ui):
     if app.group.count() == 0:
         app.group.create(Group(name="New_group_for_modify"))
     old_groups = db.get_group_list()
-    id = random.choice(old_groups).id
-    group_old_data = db.get_group_by_id(id)
+    group_old_data = random.choice(old_groups)
     old_groups.remove(group_old_data)
-    group_new_data = Group(name="New group name1", id=id)
-    app.group.modify_group_by_id(id, group_new_data)
+    group_new_data = Group(name="New group name1", id=group_old_data.id)
+    app.group.modify_group_by_id(group_old_data.id, group_new_data)
     old_groups.append(group_new_data)
     assert len(old_groups) == app.group.count()
     new_groups = db.get_group_list()
