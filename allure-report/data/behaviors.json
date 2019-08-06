@@ -1,0 +1,83 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "test_add_group[Group(, None, , )]",
+    "uid" : "282b2eb6fae5b09e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1565126449493,
+      "stop" : 1565126460594,
+      "duration" : 11101
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_add_group[Group(nameiEg wZgqW, None, header 4u1e2gxX, footeri  )]",
+    "uid" : "8fde50e6ff844938",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1565126460597,
+      "stop" : 1565126461587,
+      "duration" : 990
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_add_group[Group(nameQ6o fT, None, headerAoTWApIHJ3f, footereL7U9oNK p gyDZ)]",
+    "uid" : "f86dd30b9d9c37b8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1565126461588,
+      "stop" : 1565126462634,
+      "duration" : 1046
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_add_group[Group(nameGE5OJQFw , None, header F943z9oNn, footerq 8rJ DBzP )]",
+    "uid" : "ddc697f8a866b5fe",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1565126462635,
+      "stop" : 1565126463629,
+      "duration" : 994
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_add_group[Group(namehiDY P, None, headern  2, footerr1D V S  ZBO0r4iD)]",
+    "uid" : "1e17911361988fc",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1565126463630,
+      "stop" : 1565126464617,
+      "duration" : 987
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_add_group[Group(namehfGXCxY, None, headerxL3, footerGCC)]",
+    "uid" : "67323bd900e8730e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1565126464618,
+      "stop" : 1565126465600,
+      "duration" : 982
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ]
+}

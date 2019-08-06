@@ -1,0 +1,192 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1565126449493" stop="1565126465600">
+  <name>test.test_add_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1565126449493" status="passed" stop="1565126460594">
+      <name>test_add_group[Group(, None, , )]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10056-MainThread"/>
+        <label name="host" value="Note-Nastya"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1565126459086" status="passed" stop="1565126459089">
+          <name>Given a group list</name>
+          <title>Given a group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1565126459089" status="passed" stop="1565126460591">
+          <name>When I add a group Group(, None, , ) to the list</name>
+          <title>When I add a group Group(, None, , ) to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1565126460591" status="passed" stop="1565126460594">
+          <name>Then the new group list is equal to the old list with the added group</name>
+          <title>Then the new group list is equal to the old list with the added group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1565126460597" status="passed" stop="1565126461587">
+      <name>test_add_group[Group(nameiEg wZgqW, None, header 4u1e2gxX, footeri  )]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10056-MainThread"/>
+        <label name="host" value="Note-Nastya"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1565126460653" status="passed" stop="1565126460656">
+          <name>Given a group list</name>
+          <title>Given a group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1565126460656" status="passed" stop="1565126461583">
+          <name>When I add a group Group(nameiEg wZgqW, None, header 4u1e2gxX, footeri  ) to the list</name>
+          <title>When I add a group Group(nameiEg wZgqW, None, header 4u1e2gxX, footeri  ) to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1565126461583" status="passed" stop="1565126461587">
+          <name>Then the new group list is equal to the old list with the added group</name>
+          <title>Then the new group list is equal to the old list with the added group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1565126461588" status="passed" stop="1565126462634">
+      <name>test_add_group[Group(nameQ6o fT, None, headerAoTWApIHJ3f, footereL7U9oNK p gyDZ)]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10056-MainThread"/>
+        <label name="host" value="Note-Nastya"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1565126461630" status="passed" stop="1565126461633">
+          <name>Given a group list</name>
+          <title>Given a group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1565126461633" status="passed" stop="1565126462629">
+          <name>When I add a group Group(nameQ6o fT, None, headerAoTWApIHJ3f, footereL7U9oNK p gyDZ) to the list</name>
+          <title>When I add a group Group(nameQ6o fT, None, headerAoTWApIHJ3f, footereL7U9oNK p gyDZ) to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1565126462629" status="passed" stop="1565126462634">
+          <name>Then the new group list is equal to the old list with the added group</name>
+          <title>Then the new group list is equal to the old list with the added group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1565126462635" status="passed" stop="1565126463629">
+      <name>test_add_group[Group(nameGE5OJQFw , None, header F943z9oNn, footerq 8rJ DBzP )]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10056-MainThread"/>
+        <label name="host" value="Note-Nastya"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1565126462684" status="passed" stop="1565126462687">
+          <name>Given a group list</name>
+          <title>Given a group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1565126462687" status="passed" stop="1565126463623">
+          <name>When I add a group Group(nameGE5OJQFw , None, header F943z9oNn, footerq 8rJ DBzP ) to the list</name>
+          <title>When I add a group Group(nameGE5OJQFw , None, header F943z9oNn, footerq 8rJ DBzP ) to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1565126463623" status="passed" stop="1565126463629">
+          <name>Then the new group list is equal to the old list with the added group</name>
+          <title>Then the new group list is equal to the old list with the added group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1565126463630" status="passed" stop="1565126464617">
+      <name>test_add_group[Group(namehiDY P, None, headern  2, footerr1D V S  ZBO0r4iD)]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10056-MainThread"/>
+        <label name="host" value="Note-Nastya"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1565126463673" status="passed" stop="1565126463676">
+          <name>Given a group list</name>
+          <title>Given a group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1565126463676" status="passed" stop="1565126464613">
+          <name>When I add a group Group(namehiDY P, None, headern  2, footerr1D V S  ZBO0r4iD) to the list</name>
+          <title>When I add a group Group(namehiDY P, None, headern  2, footerr1D V S  ZBO0r4iD) to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1565126464613" status="passed" stop="1565126464617">
+          <name>Then the new group list is equal to the old list with the added group</name>
+          <title>Then the new group list is equal to the old list with the added group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1565126464618" status="passed" stop="1565126465600">
+      <name>test_add_group[Group(namehfGXCxY, None, headerxL3, footerGCC)]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10056-MainThread"/>
+        <label name="host" value="Note-Nastya"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1565126464662" status="passed" stop="1565126464666">
+          <name>Given a group list</name>
+          <title>Given a group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1565126464666" status="passed" stop="1565126465596">
+          <name>When I add a group Group(namehfGXCxY, None, headerxL3, footerGCC) to the list</name>
+          <title>When I add a group Group(namehfGXCxY, None, headerxL3, footerGCC) to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1565126465596" status="passed" stop="1565126465600">
+          <name>Then the new group list is equal to the old list with the added group</name>
+          <title>Then the new group list is equal to the old list with the added group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
