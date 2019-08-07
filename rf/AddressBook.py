@@ -3,6 +3,7 @@ import json
 import os.path
 from fixture.db import DbFixture
 from model.group import Group
+from model.contact import Contact
 
 
 class AddressBook:
@@ -48,3 +49,26 @@ class AddressBook:
     def verify_group_list_is_not_empty(self, list1):
         if len(list1) == 0:
             self.fixture.group.create(Group(name="New_group"))
+
+    def get_contact_list(self):
+        return self.dbfixture.get_contact_list()
+
+    def new_contact(self, firstname, lastname, address):
+        return Contact(firstname=firstname, lastname=lastname, address=address)
+
+    def create_contact(self, contact):
+        self.fixture.contact.create(contact)
+
+    def verify_contact_list_is_not_empty(self, list1):
+        if len(list1) == 0:
+            self.fixture.contact.create(Contact(firstname="firstname4", lastname="lastname4", address="adress4"))
+
+    def contact_lists_should_be_equal(self, list1, list2):
+        assert sorted(list1, key=Contact.id_or_max) == sorted(list2, key=Contact.id_or_max)
+
+    def delete_contact(self, contact):
+        self.fixture.contact.delete_contact_by_id(contact.id)
+
+    def modify_contact(self, contact1, contact2):
+        self.fixture.contact.modify_contact_by_id(contact1.id, contact2)
+
