@@ -32,8 +32,9 @@ Modify group
     ${len}=  Get Length  ${old_list}
     ${index}=  Evaluate  random.randrange(${len})  random
     ${group}=  Get From List  ${old_list}  ${index}
+    ${id_group}=  Get Group id  ${group}
     Remove Values From List  ${old_list}  ${group}
-    ${group_new_data}=  New Group  name2  header2  footer2
+    ${group_new_data}=  New Group For Modify  name2  header2  footer2  ${id_group}
     Modify Group  ${group}  ${group_new_data}
     ${new_list}=   Get Group List
     Append To list  ${old_list}  ${group_new_data}
@@ -66,8 +67,9 @@ Modify contact
     ${len}=  Get Length  ${old_list}
     ${index}=  Evaluate  random.randrange(${len})  random
     ${contact}=  Get From List  ${old_list}  ${index}
+    ${id_contact}=  Get Contact id  ${contact}
     Remove Values From List  ${old_list}  ${contact}
-    ${contact_new_data}=  New Contact  firstname2  lastname2  address2
+    ${contact_new_data}=  New Contact For Modify  firstname2  lastname2  address2  ${id_contact}
     Modify Contact  ${contact}  ${contact_new_data}
     ${new_list}=   Get Contact List
     Append To list  ${old_list}  ${contact_new_data}

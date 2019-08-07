@@ -31,6 +31,9 @@ class AddressBook:
     def new_group(self, name, header, footer):
         return Group(name=name, header=header, footer=footer)
 
+    def new_group_for_modify(self, name, header, footer, id):
+        return Group(name=name, header=header, footer=footer, id=id)
+
     def get_group_list(self):
         return self.dbfixture.get_group_list()
 
@@ -39,6 +42,12 @@ class AddressBook:
 
     def delete_group(self, group):
         self.fixture.group.delete_group_by_id(group.id)
+
+    def get_group_id(self, group):
+        return group.id
+
+    def get_contact_id(self, contact):
+        return contact.id
 
     def modify_group(self, group1, group2):
         self.fixture.group.modify_group_by_id(group1.id, group2)
@@ -55,6 +64,9 @@ class AddressBook:
 
     def new_contact(self, firstname, lastname, address):
         return Contact(firstname=firstname, lastname=lastname, address=address)
+
+    def new_contact_for_modify(self, firstname, lastname, address, id):
+        return Contact(firstname=firstname, lastname=lastname, address=address, id=id)
 
     def create_contact(self, contact):
         self.fixture.contact.create(contact)
